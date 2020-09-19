@@ -138,7 +138,7 @@ def _main():
 #        with open(r"bleualign_data\dev.de", encoding='utf-8-sig') as source:
 #            lines = source.readlines()
 #            print(lines[stack[0]['final_alignments'][6][0][0]])
-        mined_sentences(stack[0]['final_alignments'], stack[0]['alignment_scores'], src_file, tgt_file)
+        mined_sentences(stack[0]['final_alignments'], stack[0]['alignment_scores'], src_file + "_lines.txt", tgt_file + "_lines.txt")
 
 
         test_alignments.append(stack[0]['final_alignments'])
