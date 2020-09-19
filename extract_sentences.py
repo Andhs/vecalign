@@ -7,10 +7,10 @@ def mined_sentences(alignments, scores, src_file, tgt_file, src_file_lines, tgt_
         source_lines = source.readlines()
     with open(tgt_file_lines, encoding='utf-8-sig') as target:
         target_lines = target.readlines()
-    mined_source_prep = open(src_file + "_mined.txt", "w", encoding='utf-8-sig')
-    mined_target_prep = open(tgt_file + "_mined.txt", "w", encoding='utf-8-sig')
-    mined_source = open(src_file + "_mined_lines.txt", "w", encoding='utf-8-sig')
-    mined_target = open(tgt_file + "_mined_lines.txt", "w", encoding='utf-8-sig')
+    mined_source_prep = open(src_file[:-9] + "_mined.txt", "w", encoding='utf-8-sig')
+    mined_target_prep = open(tgt_file[:-9] + "_mined.txt", "w", encoding='utf-8-sig')
+    mined_source = open(src_file[:-9] + "_mined_lines.txt", "w", encoding='utf-8-sig')
+    mined_target = open(tgt_file[:-9] + "_mined_lines.txt", "w", encoding='utf-8-sig')
 
     for i in range(len(alignments)):
         if scores[i] > 0.1:
