@@ -20,7 +20,7 @@ def mined_sentences(alignments, scores, src_file, tgt_file, src_file_lines, tgt_
             mined_source_prep.write("\n")
             mined_source.write("\n")
             for k in range(len(alignments[i][1])):
-                mined_target_prer.write(target_lines_prep[alignments[i][1][k]].strip("\n"))
+                mined_target_prep.write(target_lines_prep[alignments[i][1][k]].strip("\n"))
                 mined_target.write(target_lines[alignments[i][1][k]].strip("\n"))
             mined_target_prep.write("\n")
             mined_target.write("\n")
