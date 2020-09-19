@@ -88,6 +88,7 @@ def make_doc_embedding(sent2line, line_embeddings, lines, num_overlaps):
         for jj, out_line in enumerate(layer(lines, overlap)):
             try:
                 line_id = sent2line[out_line]
+                print("OK ", out line)
             except KeyError:
                 logger.warning('Failed to find overlap=%d line "%s". Will use random vector.', overlap, out_line)
                 line_id = None
