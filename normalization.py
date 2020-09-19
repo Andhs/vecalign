@@ -24,4 +24,5 @@ def norm_spaces(output_file, input_file):
 
     with open(output_file, "w", encoding='utf-8-sig') as fout:
         for line in output:
-            fout.write(line)
+            if line:
+                fout.write(line)
