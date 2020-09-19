@@ -1,4 +1,4 @@
-def mined_sentences(alignments, scores, src_file, tgt_file, src_file_lines, tgt_files_lines):
+def mined_sentences(alignments, scores, src_file, tgt_file, src_file_lines, tgt_file_lines):
     with open(src_file, encoding='utf-8-sig') as source:
         source_lines_prep = source.readlines()
     with open(tgt_file, encoding='utf-8-sig') as target:
