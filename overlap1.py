@@ -38,8 +38,9 @@ def go(output_file, input_files, num_overlaps):
     output.sort()
 
     with open(output_file, 'wt', encoding="utf-8") as fout:
-        for line in output:
+        for line in output[:-1]:
             fout.write(line + '\n')
+        fout.write(output[-1])
 
 
 def _main():
