@@ -14,15 +14,17 @@ def mined_sentences(alignments, scores, src_file, tgt_file, src_file_lines, tgt_
 
     for i in range(len(alignments)):
         if scores[i] > 0.1:
-            for j in range(len(alignments[i][0])):
-                mined_source_prep.write(source_lines_prep[alignments[i][0][j]].strip("\n"))
-                mined_source.write(source_lines[alignments[i][0][j]].strip("\n") + "   ")
+            line_prep_source = " ".join(source_lines_prep[alignments[i][0]].strip("\n"))
+            line_source = "   ".join(source_lines[alignments[i][0]].strip("\n"))
+            mined_source_prep.write(line_prep_source)
+            mined_source.write(line_source)
             if i < len(alignments)-1:
                 mined_source_prep.write("\n")
                 mined_source.write("\n")
-            for k in range(len(alignments[i][1])):
-                mined_target_prep.write(target_lines_prep[alignments[i][1][k]].strip("\n"))
-                mined_target.write(target_lines[alignments[i][1][k]].strip("\n") + "   ")
+            line_prep_target = " ".join(target_lines_prep[alignments[i][1]].strip("\n"))
+            line_target = "   ".join(target_lines[alignments[i][1]].strip("\n"))
+            mined_target_prep.write(line_prep_target)
+            mined_target.write(line_target)
             if i < len(alignments)-1:
                 mined_target_prep.write("\n")
                 mined_target.write("\n")
