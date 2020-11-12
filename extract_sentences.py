@@ -34,7 +34,7 @@ def mined_sentences(alignments, scores, src_file, tgt_file, src_file_lines, tgt_
                 # А нормальные строки записываем сначала в список, чтобы потом записать элементы через разделитель
                 line_target.append(target_lines[alignments[i][1][k]].strip("\n"))
             mined_target.write("   ".join(line_target))
-            accepted.write("\t" + "   ".join(line_target) + "\t" + scores[i])
+            accepted.write("\t" + "   ".join(line_target) + "\t" + str(scores[i]))
             if i < len(alignments)-1:
                 mined_target_prep.write("\n")
                 mined_target.write("\n")
@@ -49,7 +49,7 @@ def mined_sentences(alignments, scores, src_file, tgt_file, src_file_lines, tgt_
             for k in range(len(alignments[i][1])):
                 # А нормальные строки записываем сначала в список, чтобы потом записать элементы через разделитель
                 line_target.append(target_lines[alignments[i][1][k]].strip("\n"))
-            rejected.write("\t" + "   ".join(line_target) + "\t" + scores[i])
+            rejected.write("\t" + "   ".join(line_target) + "\t" + str(scores[i]))
             if i < len(alignments)-1:
                 rejected.write("\n")
 
