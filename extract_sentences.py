@@ -17,7 +17,7 @@ def mined_sentences(alignments, scores, src_file, tgt_file, src_file_lines, tgt_
 
 
     for i in range(len(alignments)):
-        if scores[i] > 0.1:
+        if scores[i] > 0.0:
             line_source = []
             line_target = []
             for j in range(len(alignments[i][0])):
